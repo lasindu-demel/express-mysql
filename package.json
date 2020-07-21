@@ -1,18 +1,30 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "express-mysql",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
   "scripts": {
-    "test": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/time2hack/express-mysql.git"
+  },
+  "keywords": [
+    "express",
+    "mysql",
+    "time2hack"
+  ],
   "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/time2hack/express-mysql/issues"
+  },
+  "homepage": "https://github.com/time2hack/express-mysql#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.4"
+    "mysql": "^2.17.1",
+    "nodejs-md5": "^1.1.0"
   }
 }

@@ -1,4 +1,6 @@
-const mysql = require('mysql');
+const dotenv = require("dotenv")
+ 
+dotenv.config();
 
 // Get the Host from Environment or use default
 const host = process.env.DB_HOST || 'localhost';
@@ -12,23 +14,4 @@ const password = process.env.DB_PASS || '';
 // Get the Database from Environment or use default
 const database = process.env.DB_DATABASE || 'twitter_clone';
 
-// Create the connection with required details
-const con = mysql.createConnection({
-  host, user, password, database,
-});
-
-const query = "SELECT * FROM tweets";
- 
-// make to connection to the database.
-con.connect(function(err) {
-  if (err) throw err;
-
-  // if connection is successful
-  con.query(query, (err, result, fields) => {
-    // if any error while executing above query, throw error
-    if (err) throw err;
-
-    // if there is no error, you have the result
-    console.log(result);
- });
-});
+module.exports = { host, user, password, database };

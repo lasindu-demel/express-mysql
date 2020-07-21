@@ -1,4 +1,3 @@
-// connect
 const mysql = require('mysql');
 
 module.exports = async (params) => new Promise(
